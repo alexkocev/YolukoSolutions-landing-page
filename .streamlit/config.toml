@@ -1,0 +1,17 @@
+[theme]
+base = "light"
+
+# A subtle blue-gray which can be professional and modern
+primaryColor = "#4A90E2"
+
+# A soft gray background for the main content
+backgroundColor = "#FAFAFA"
+
+# A slightly darker gray for secondary content areas to give depth and differentiation
+secondaryBackgroundColor = "#F0F0F0"
+
+# Charcoal color for the main text for good readability
+textColor = "#333333"
+
+# Specifying a particular modern font for clarity and professionalism
+font = "sans serif"
