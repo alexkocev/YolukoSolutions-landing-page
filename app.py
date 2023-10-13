@@ -140,12 +140,9 @@ with st.container():
         st.subheader("Backtest your trading strategies")
         st.write(
             """
-            Want to validate and refine your trading strategy? Our app can:
-            - **backtest** your trading strategy efficiently.
-            - **optimize** and fine-tune for best results.
-            - **visualize** and plot the results for clear analysis.
+            Want to validate and refine your trading strategy? 
             
-            Dive in and make your trading strategy more robust.
+            Use our app to backtest your trading strategy efficiently, optimize for better returns and visualize the results for clear analysis.
             """
         )
         st.markdown("[Visit our Backtester...](https://backtester-g9xl.onrender.com/)")
@@ -157,11 +154,12 @@ with st.container():
         st.image(svg_to_pil_image(str(current_dir / "images" / "people_svg" / "1.svg")))
         #st.image(Image.open("images/people/1.png"))
     with text_column:
-        st.subheader("How To Add A Contact Form To Your Streamlit App")
+        st.subheader("Format your spreadsheets")
         st.write(
             """
-            Want to add a contact form to your Streamlit website?
-            In this video, I'm going to show you how to implement a contact form in your Streamlit app using the free service ‘Form Submit’.
+            Want to automate your spreadsheet formatting?
+
+            Use our app to import, format and export your spreadsheet data in just a second.
             """
         )
         st.markdown("[Watch Video...](https://youtu.be/123)")
