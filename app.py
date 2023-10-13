@@ -28,47 +28,6 @@ def local_css(file_name):
 local_css("style/style.css")
 
 
-# Display svg images
-def svg_to_pil_image(svg_path):
-    """Convert svg file to a transparent background PIL Image."""
-    # Convert SVG to PNG with transparent background
-    output = BytesIO()
-    with open(svg_path, "rb") as f:
-        cairosvg.svg2png(file_obj=f, write_to=output)
-    
-    # Open the PNG image with PIL
-    image = Image.open(output)
-    
-    # Ensure the image has an alpha channel for transparency
-    image = image.convert("RGBA")
-    
-    # Get data of the image
-    datas = image.getdata()
-    
-    # Create a new image data list
-    new_data = []
-    
-    # Loop through the image data
-    # If the pixel is white (or close to white), make it transparent
-    # Otherwise, keep the original pixel
-    for item in datas:
-        if item[0] > 220 and item[1] > 220 and item[2] > 220:  # Change these values if needed
-            new_data.append((255, 255, 255, 0))
-        else:
-            new_data.append(item)
-    
-    # Update image data
-    image.putdata(new_data)
-    return image
-
-
-
-
-
-
-
-
-
 # ---- HEADER SECTION ----
 with st.container():
     left_column, right_column = st.columns([1,6])
@@ -113,7 +72,7 @@ with st.container():
 
     st.write("""
         **Speed Up Your Business**:
-        You take days to create reports, design dashboards, contact customers, and more ?
+        You take days to create reports, design dashboards, format data and spreadsheets, contact customers and more ?
         
         **With Techno Clear, it's just a second with a press of the 'Run' button.**
         """)
@@ -124,7 +83,7 @@ with st.container():
 
 
 
-# ---- PROJECTS ----
+# ---- BACKTRADER ----
 with st.container():
     st.write("---")
     st.header("Our Projects")
@@ -133,9 +92,8 @@ with st.container():
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(svg_to_pil_image(str(current_dir / "images" / "people_svg" / "2.svg")))
+        st.image(str(current_dir / "images" / "people_svg" / "4.svg"))
 
-        #st.image(Image.open("images/people/2.png"))
     with text_column:
         st.subheader("Backtest your trading strategies")
         st.write(
@@ -148,21 +106,89 @@ with st.container():
         st.markdown("[Visit our Backtester...](https://backtester-g9xl.onrender.com/)")
 
 
+
+# ---- SPREADSHEET ----
 with st.container():
+    st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(svg_to_pil_image(str(current_dir / "images" / "people_svg" / "1.svg")))
-        #st.image(Image.open("images/people/1.png"))
+        st.image(str(current_dir / "images" / "people_svg" / "3.svg"))
+
     with text_column:
-        st.subheader("Format your spreadsheets")
+        st.subheader("Advanced Spreadsheet Processor")
         st.write(
             """
-            Want to automate your spreadsheet formatting?
+            Transform raw data into actionable insights.
 
-            Use our app to import, format and export your spreadsheet data in just a second.
+            Import and process data effortlessly with our application. Extract key information and receive tailored output files. Get structured, ready-to-use datasets in just a click.
             """
         )
-        st.markdown("[Watch Video...](https://youtu.be/123)")
+        #st.markdown("[Watch Video...](https://youtu.be/123)")
+
+
+
+# ---- ACCOUNTING ----
+with st.container():
+    st.write("##")
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(str(current_dir / "images" / "people_svg" / "2.svg"))
+
+    with text_column:
+        st.subheader("Streamline Invoice Management")
+        st.write(
+            """
+            Invoicing taking up too much time?
+
+            Introducing an automation app that scans, categorizes, and manages invoices. Say goodbye to manual data entry and errors.
+            """
+        )
+        #st.markdown("[Try AutoInvoice...](https://autoinvoice-g9xl.onrender.com/)")
+
+
+
+
+# ---- EDUCATION ----
+with st.container():
+    st.write("##")
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(str(current_dir / "images" / "people_svg" / "1.svg"))
+
+    with text_column:
+        st.subheader("Assignment Organizer for Educators")
+        st.write(
+            """
+            Streamline student homework and assignments.
+
+            Our app helps educators to distribute, collect, and organize assignments in one place. Simplifying the grading process and making class management seamless.
+            """
+        )
+       #st.markdown("[Use TeachEase...](https://teachease-g9xl.onrender.com/)")
+
+
+
+
+# ---- RESTAURANT ROSTERING ----
+with st.container():
+    st.write("##")
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(str(current_dir / "images" / "people_svg" / "5.svg"))
+
+    with text_column:
+        st.subheader("Automated Roster Builder for Restaurants")
+        st.write(
+            """
+            Simplify workforce scheduling for your restaurant chain.
+
+            Our app takes into consideration staff availability, peak hours, and roles to automatically generate optimal rosters for each outlet. Ensure smooth operations with balanced work shifts.
+            """
+        )
+        #st.markdown("[Try RosterChef...](https://rosterchef-g9xl.onrender.com/)")
+
+
+
 
 
 
@@ -186,3 +212,27 @@ with st.container():
 
     with right_column:
         st.empty()
+
+
+
+
+# ---- FOOTER ----
+footer="""<style>
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;   /* Adjust size as needed */
+}
+</style>
+
+<div class="footer">
+  © 2023 Techno Clear. All Rights Reserved. SIREN: 952 266 641.
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
