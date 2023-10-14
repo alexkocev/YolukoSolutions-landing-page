@@ -1,13 +1,8 @@
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
-from PIL import Image
 from pathlib import Path
 import json
-# to convert from svg to png
-import cairosvg
-from PIL import Image
-from io import BytesIO
 
 current_dir = Path(__file__).parent
 
