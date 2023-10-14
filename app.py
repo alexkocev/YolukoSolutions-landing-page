@@ -98,7 +98,7 @@ with st.container():
             Use our app to backtest your trading strategy efficiently, optimize for better returns and visualize the results for clear analysis.
             """
         )
-        st.markdown("[Visit our Backtester...](https://backtester-g9xl.onrender.com/)")
+        st.markdown("[Visit our Backtester App](https://backtester-g9xl.onrender.com/)")
 
 
 
@@ -172,10 +172,10 @@ with st.container():
         st.image(str(current_dir / "images" / "people_svg" / "5.svg"))
 
     with text_column:
-        st.subheader("Automated Roster Builder for Restaurants")
+        st.subheader("Automated Roster Builder")
         st.write(
             """
-            Simplify workforce scheduling for your restaurant chain.
+            Simplify workforce scheduling for your company.
 
             Our app takes into consideration staff availability, peak hours, and roles to automatically generate optimal rosters for each outlet. Ensure smooth operations with balanced work shifts.
             """
@@ -197,11 +197,11 @@ with st.container():
         st.header("Get In Touch With Us!")
         st.write("""
         Whether you have a question, a proposal, or just want to say hello, 
-        I'd love to hear from you. Don't hesitate to reach out!
+        we'd love to hear from you. We speak English and French. Don't hesitate to reach out!
         """)
 
         # Displaying contact options
-        st.write("📧 Email: [alexandre.kocev@gmail.com](mailto:alexandre.kocev@gmail.com)")
+        st.write("📧 Email: contact@techno-clear.com")
         st.write("📞 Phone: +33 (0)6 04 43 69 84")
         st.write("🌐 Location: 69001 Lyon, France")
 
@@ -226,7 +226,7 @@ footer="""<style>
 </style>
 
 <div class="footer">
-  © 2023 Techno Clear. All Rights Reserved. SIREN: 952 266 641.
+  © 2023 Techno Clear.  All Rights Reserved.  SIREN: 952 266 641.  Email: contact@techno-clear.com
 </div>
 """
 
