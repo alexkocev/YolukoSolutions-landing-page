@@ -201,9 +201,10 @@ with st.container():
         """)
 
         # Displaying contact options
-        st.write("📧 Email: contact@techno-clear.com")
+        st.write("📧 Email: contact@techno-clear​.fr")
         st.write("📞 Phone: +33 (0)6 04 43 69 84")
         st.write("🌐 Location: 69001 Lyon, France")
+        st.write("👱🏻‍♂️ Contact: Alexandre Kocev")
 
     with right_column:
         st.empty()
@@ -226,7 +227,7 @@ footer="""<style>
 </style>
 
 <div class="footer">
-  © 2023 Techno Clear.  All Rights Reserved.  SIREN: 952 266 641.  Email: contact@techno-clear.com
+  © 2023 Techno Clear.  All Rights Reserved.  SIREN: 952 266 641.  Email: contact@techno-clear.fr
 </div>
 """
 
