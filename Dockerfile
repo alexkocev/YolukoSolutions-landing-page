@@ -17,4 +17,6 @@ RUN pip install --upgrade pip && \
 # Copy the rest of the app
 COPY . .
 
+COPY index.html /usr/local/lib/python3.11/site-packages/streamlit/static/index.html
+
 CMD ["streamlit", "run", "app.py", "--server.address", "0.0.0.0", "--server.port", "8088"]
